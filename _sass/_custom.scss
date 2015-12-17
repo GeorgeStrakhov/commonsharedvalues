@@ -1,0 +1,46 @@
+body {
+  background-image: url('/assets/wavegrid.png');
+  background-repeat: repeat;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.site-footer {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2em;
+  border-top: 1px solid #777;
+}
+
+.header {
+  padding: 0.8em;
+  a {
+    color: black;
+    &:active, &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.top-block {
+  .logo-container {
+    width: 80%;
+    height: 80%;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+  }
+  .tagline {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+}
+
+.actions {
+ text-align: center; 
+}

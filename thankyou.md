@@ -10,9 +10,9 @@ permalink: /thank-you/
 
 The world has just gotten a little better!
 
-Now the key is obsiously in keeping true to these values at all times. Individually, we humans are weak and forgetful. So one of the best ways of doing it - is getting a few friends to watch over you. As the saying goes, "Together we stand, divided we fall".
+Now the key is obsiously in keeping true to these values at all times. Individually, we humans are weak and forgetful. So one of the best ways of doing it - is getting a few friends to watch over you. As the saying goes, "[Together we stand, divided we fall](https://www.youtube.com/watch?v=jQcBwE6j09U)".
 
-Please consider using the buttons below to publicly nominate a couple of your friends, whose judgment you trus, to always make sure that you are on the bright side and remind you, should you ever go astray.
+Please consider using the buttons below to publicly nominate a couple of your friends, whose judgment you trust, to always make sure that you are on the bright side and remind you, should you ever go astray.
 
 -------
 

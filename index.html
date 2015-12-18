@@ -26,5 +26,16 @@ layout: default
 	$(document).ready(function() {
 			<!-- launch welcome modal on page load -->
 			$('#welcomeModal').modal('show');
+      <!-- trigger fb share on 'share' button click -->
+      $('#fbShareButton').on('click', function() {
+				FB.ui({
+					method: 'feed',
+					link: 'http://commonsharedvalues.org',
+					caption: 'Let\'s all stay on the bright side! I nominate the following people to watch over me and make sure that I uphold the Common Shared Values:',
+				}, function(response){
+          //redirect to thank you page after successful sharing
+          window.location.href='/thank-you-share';
+				}); 
+      });
 	})
 </script>

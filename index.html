@@ -13,7 +13,7 @@
   <meta property="og:url"           content="http://commonsharedvalues.org" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Common Shared Values" />
-  <meta property="og:description"   content="Dear fellow humans! Social Contract (in its broadest sense) is a beautiful idea that has been around for centuries. In theory a social contract should prevent our society from violent chaos. In practice and on a global scale - it doesn't seem to work well. Why? Because none of us remember agreeing to it. Today, thanks to the Internet, we can fix this!" />
+  <meta property="og:description"   content="Dear fellow humans! Social Contract (in its broadest sense) is a beautiful idea. The only problem is - none of us remember agreeing to it. Today, thanks to the Internet, we can fix this!" />
   <meta property="og:image"         content="http://commonsharedvalues.org/assets/commonsharedvalues.png" />
 
   <!-- Bootstrap -->
@@ -79,6 +79,11 @@
 
   <div class="actions">
   <div class="main-action">
+    <button class="btn btn-lg btn-info btn-block" id="fbShareButton">SHARE</button>
+  </div>
+  <br>
+  <p> <em>-&nbsp;&nbsp;&amp;&nbsp;&nbsp;-</em></p>
+  <div class="main-action">
     <a href="subscribe" class="btn btn-lg btn-success btn-block">SUBSCRIBE</a>
   </div>
   <div class="secondary-actions">
@@ -100,7 +105,7 @@
       <div class="modal-body">
         <p>"<a href="https://en.wikipedia.org/wiki/Social_contract" target="_blank">Social Contract</a>" (in its broadest sense) is a beautiful idea that has been around for centuries. In theory a social contract should prevent our society from violent chaos. In practice and on a global scale - it doesn't seem to work well. Why? Because none of us remember agreeing to it.</p>
         <p>Today, thanks to the Internet, we can fix this. We can all co-create the basic list of values that we can all (regardless of our race, gender, age or religion) voluntarily agree to keep up. And then we can try to keep them up for real - because it's us who agreed to them, not philosophers or politicians.</p>
-        <p>Below is my humble first draft of such a list. If you agree - please sign and share. If you don't - please suggest your edits, but keep in mind that the aim is to define the "most common denominator" of practical ethics, not the fullest or the best one. In other words, we are after something almost everyone can agree to.</p>
+        <p>Below is my humble first draft of such a list. If you agree - please share and subscribe. If you don't - please suggest your edits, but keep in mind that the aim is to define the "most common denominator" of practical ethics, not the fullest or the best one. In other words, we are after something almost everyone can agree to.</p>
         <p>With faith in humanity,
         <br>George Strakhov</p>
       </div>
@@ -119,6 +124,17 @@
 	$(document).ready(function() {
 			<!-- launch welcome modal on page load -->
 			$('#welcomeModal').modal('show');
+      <!-- trigger fb share on 'share' button click -->
+      $('#fbShareButton').on('click', function() {
+				FB.ui({
+					method: 'feed',
+					link: 'http://commonsharedvalues.org',
+					caption: 'Let\'s all stay on the bright side! I nominate the following people to watch over me and make sure that I uphold the Common Shared Values:',
+				}, function(response){
+          //redirect to thank you page after successful sharing
+          window.location.href='/thank-you-share';
+				}); 
+      });
 	})
 </script>
 
@@ -133,6 +149,25 @@
 
 
     </div>
+
+    <!-- FB -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1031173206944909',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 		<!-- GA -->
 		<script>
